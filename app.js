@@ -42,7 +42,7 @@ function isWin(bool) {
         randomColor.parentElement.style.background = color;
         displyColors(options, true)
         message(true, 'That\'s correct!')
-        startBtn.innerHTML = `<div class="btn  col s6 l4 green right text-white"><i class='material-icons'></i>restart</div>`
+        startBtn.innerHTML = `<div class="btn  col s6 l4 green right text-white"><i class='material-icons medium left'>replay</i>restart</div>`
     } else {
         message(false, 'wrong try again');
         setTimeout(() => {
@@ -77,11 +77,11 @@ function generateColors() {
     return colors;
 };
 
-function selectRandomColor(colors) {
+function selectRandomColor(colors) { //selects a color
     return colors[Math.floor(Math.random() * colors.length)]
 };
 
-function getRandomColor() {
+function getRandomColor() { //generates random colors
     let r = Math.floor(Math.random() * 256),
         g = Math.floor(Math.random() * 256),
         b = Math.floor(Math.random() * 256);
